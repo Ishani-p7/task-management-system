@@ -1,4 +1,4 @@
-import { Prisma } from '@prisma/client';
+
 import { prisma } from '../lib/prisma';
 import { NotFoundError, ForbiddenError } from '../utils/errors';
 
@@ -55,7 +55,7 @@ export async function getTasks(userId: string, query: TaskListQuery) {
   const skip = (page - 1) * limit;
   const take = Math.min(limit, 50);
 
-  const where: Prisma.TaskWhereInput = {
+  const where: Record<string, unknown> = {
     userId,
     ...(status && { status }),
     ...(priority && { priority }),
