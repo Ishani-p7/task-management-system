@@ -161,7 +161,7 @@ export async function getTaskStats(userId: string) {
 
   const stats = { total, pending: 0, inProgress: 0, completed: 0 };
 
-  byStatus.forEach((s) => {
+  byStatus.forEach((s: { status: string; _count: { status: number } }) => {
     if (s.status === 'PENDING') stats.pending = s._count.status;
     if (s.status === 'IN_PROGRESS') stats.inProgress = s._count.status;
     if (s.status === 'COMPLETED') stats.completed = s._count.status;
