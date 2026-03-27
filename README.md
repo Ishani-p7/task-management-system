@@ -6,6 +6,7 @@ Task CRUD, filters, search, pagination
 Dashboard with stats
 Auto token refresh & persistent login
 Responsive UI with modals, toasts, and validation
+
 Tech Stack
 Backend: Node.js, Express, Prisma
 DB: SQLite / PostgreSQL
@@ -14,6 +15,7 @@ Auth & Security: JWT, bcrypt, rate limiting, validation
 Core APIs
 Auth: register, login, refresh, logout, me
 Tasks: create, read, update, delete, stats, toggle status
+
 Highlights
 Secure token rotation
 Ownership-based access control
